@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Nagpur Solar Cleaning</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    color:#222;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    background:#0b3d91;
+    color:white;
+    padding:15px 20px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:700;
+}
+
+.logo span{
+    color:#00ff95;
+}
+
+.contact{
+    font-size:13px;
+    text-align:right;
+}
+
+/* HERO */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:30px 20px;
+
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url('https://images.unsplash.com/photo-1509391366360-2e959784a276?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-content{
+    width:100%;
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:20px;
+    line-height:1.3;
+}
+
+.hero h1 span{
+    color:#00ff95;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+/* BUTTONS */
+
+.btn-group{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.btn{
+    padding:14px 25px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:0.3s;
+    min-width:160px;
+}
+
+.btn-whatsapp{
+    background:#25D366;
+}
+
+.btn-call{
+    background:#ff6f00;
+}
+
+.btn-book{
+    background:#00c853;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+}
+
+/* SECTIONS */
+
+.section{
+    padding:60px 20px;
+}
+
+.section-title{
+    text-align:center;
+    font-size:34px;
+    margin-bottom:40px;
+    color:#0b3d91;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    padding:25px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+    text-align:center;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card h3{
+    margin-bottom:15px;
+    color:#0b3d91;
+}
+
+/* PRICE TABLE */
+
+.price-section{
+    background:#0b3d91;
+    color:white;
+}
+
+.table-container{
+    overflow-x:auto;
+}
+
+.price-table{
+    width:100%;
+    min-width:300px;
+    border-collapse:collapse;
+    background:white;
+    color:black;
+    border-radius:15px;
+    overflow:hidden;
+}
+
+.price-table th{
+    background:#00c853;
+    color:white;
+}
+
+.price-table th,
+.price-table td{
+    padding:15px;
+    border:1px solid #ddd;
+    text-align:center;
+}
+
+/* ABOUT */
+
+.about-text{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* FOOTER */
+
+footer{
+    background:#001b44;
+    color:white;
+    text-align:center;
+    padding:25px 15px;
+    font-size:14px;
+}
+
+/* FLOATING BUTTONS */
+
+.floating-buttons{
+    position:fixed;
+    right:15px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:999;
+}
+
+.float-btn{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    font-size:24px;
+    text-decoration:none;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+.whatsapp-float{
+    background:#25D366;
+}
+
+.call-float{
+    background:#ff6f00;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero p{
+    font-size:15px;
+}
+
+.section-title{
+    font-size:28px;
+}
+
+.logo{
+    font-size:18px;
+}
+
+.contact{
+    font-size:12px;
+    margin-top:10px;
+    width:100%;
+    text-align:left;
+}
+
+.btn{
+    width:100%;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="navbar">
+
+        <div class="logo">
+            NAGPUR <span>SOLAR CLEANING</span>
+        </div>
+
+        <div class="contact">
+            📞 9511296837 <br>
+            📞 9822364286
+        </div>
+
+    </div>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>
+            Professional <span>Solar Panel Cleaning</span>
+        </h1>
+
+        <p>
+            Increase solar efficiency with safe and professional cleaning services for homes, offices, factories and industries.
+        </p>
+
+        <div class="btn-group">
+
+            <a href="https://wa.me/919511296837" class="btn btn-whatsapp">
+                WhatsApp Now
+            </a>
+
+            <a href="tel:9511296837" class="btn btn-call">
+                Call Now
+            </a>
+
+            <a href="https://forms.gle/" class="btn btn-book">
+                Book Now
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- SERVICES -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Our Services
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Residential Cleaning</h3>
+            <p>Complete rooftop solar cleaning for homes and apartments.</p>
+        </div>
+
+        <div class="card">
+            <h3>Commercial Cleaning</h3>
+            <p>Professional cleaning for offices, shops and factories.</p>
+        </div>
+
+        <div class="card">
+            <h3>RO Water Cleaning</h3>
+            <p>Spot-free cleaning using purified RO water technology.</p>
+        </div>
+
+        <div class="card">
+            <h3>AMC Services</h3>
+            <p>Monthly and yearly maintenance contracts available.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- PRICE LIST -->
+
+<section class="section price-section">
+
+    <h2 class="section-title" style="color:white;">
+        Price List
+    </h2>
+
+    <div class="table-container">
+
+        <table class="price-table">
+
+            <tr>
+                <th>System Size</th>
+                <th>Price</th>
+            </tr>
+
+            <tr>
+                <td>1KW - 2KW</td>
+                <td>₹300 - ₹500</td>
+            </tr>
+
+            <tr>
+                <td>3KW - 5KW</td>
+                <td>₹800 - ₹1200</td>
+            </tr>
+
+            <tr>
+                <td>6KW - 10KW</td>
+                <td>₹1500 - ₹3000</td>
+			 <tr>
+                <td>large solar plants</td>
+                <td>Site Inspection required</td>
+            </tr>
+            </tr>
+
+        </table>
+
+    </div>
+
+</section>
+
+<!-- MEMBERSHIP -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Membership Plans
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>6 Month Membership</h3>
+
+            <p>
+                ✔️ Monthly Cleaning <br><br>
+                ✔️ Free Inspection <br><br>
+                ✔️ Priority Service <br><br>
+                ✔️ Starting From ₹2999
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>1 Year Membership</h3>
+
+            <p>
+                ✔️ 2 Cleanings Every Month <br><br>
+                ✔️ Complete Maintenance <br><br>
+                ✔️ Fast Support <br><br>
+                ✔️ Starting From ₹5999
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Why Choose Us
+    </h2>
+
+    <p class="about-text">
+
+        We use safe non-scratch cleaning methods with professional equipment.
+        Our mission is to improve solar panel efficiency and provide reliable service
+        across Nagpur and nearby areas.
+
+    </p>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="section">
+
+    <h2 class="section-title">
+        Contact & Office Address
+    </h2>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <h3>Office Address</h3>
+
+            <p>
+                Nagpur Solar Cleaning <br><br>
+
+                Plot No. 21, Wardha Road, <br>
+                Near Chatrapati Square, <br>
+                Nagpur, Maharashtra - 440025
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Contact Details</h3>
+
+            <p>
+                📞 9511296837 <br><br>
+
+                📞 9822364286 <br><br>
+
+                📧 nagpursolarcleaning@gmail.com
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <h3>Working Hours</h3>
+
+            <p>
+                Monday - Saturday <br><br>
+
+                8:00 AM - 7:00 PM <br><br>
+
+                Sunday Emergency Service Available
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Nagpur Solar Cleaning <br><br>
+
+    Clean Panels • More Power • Better Future
+
+</footer>
+
+<!-- FLOATING BUTTONS -->
+
+<div class="floating-buttons">
+
+    <a href="https://wa.me/919511296837"
+       class="float-btn whatsapp-float">
+       💬
+    </a>
+
+    <a href="tel:9511296837"
+       class="float-btn call-float">
+       📞
+    </a>
+
+</div>
+
+</body>
+</html>
